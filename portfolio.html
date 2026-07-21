@@ -6,7 +6,7 @@
     <title>Portfolio — DelatyLabs</title>
     <meta
       name="description"
-      content="Selected work from DelatyLabs — web, mobile, and TV projects we've designed and built."
+      content="Selected work and enterprise experience from DelatyLabs engineers — banking, telecom, retail, hospitality, and studio products."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +48,10 @@
         <div class="container">
           <p class="eyebrow">Portfolio</p>
           <h1>Work we're proud of.</h1>
-          <p>A selection of products we've designed, built, and launched.</p>
+          <p>
+            Studio products plus selected projects our engineers contributed to while
+            building enterprise apps for banks, telecoms, and consumer brands.
+          </p>
         </div>
       </section>
 
@@ -56,58 +59,113 @@
         <div class="container">
           <div class="filters">
             <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="web">Web</button>
-            <button class="filter" data-filter="mobile">Mobile</button>
-            <button class="filter" data-filter="tv">TV</button>
+            <button class="filter" data-filter="enterprise">Enterprise</button>
+            <button class="filter" data-filter="mobile">Consumer apps</button>
+            <button class="filter" data-filter="studio">Studio</button>
           </div>
 
           <div class="portfolio-grid">
-            <article class="project reveal" data-category="tv">
-              <div class="thumb">📺</div>
+            <article class="project reveal" data-category="enterprise">
+              <div class="thumb">🏦</div>
               <div class="body">
-                <span class="tag">TV App</span>
-                <h3>AyahScape</h3>
-                <p>An immersive Quran experience for smart TVs across multiple platforms.</p>
+                <span class="tag">Fintech · React Native</span>
+                <h3>Bank Albilad Mobile App</h3>
+                <p>
+                  End-to-end migration from legacy Kony to a scalable React Native
+                  monorepo — CI/CD, modular architecture, and next-gen banking features.
+                </p>
+                <p class="meta">Contributed while at Advansys · Senior Software Developer</p>
               </div>
             </article>
-            <article class="project reveal" data-category="web">
+
+            <article class="project reveal" data-category="enterprise">
+              <div class="thumb">📡</div>
+              <div class="body">
+                <span class="tag">Telecom · 20M+ users</span>
+                <h3>Mein Vodafone</h3>
+                <p>
+                  Enterprise features for Vodafone Germany's flagship self-service app
+                  across the DACH region — performance, clean architecture, and mentoring.
+                </p>
+                <p class="meta">Contributed while at VOIS · Senior Software Developer</p>
+              </div>
+            </article>
+
+            <article class="project reveal" data-category="mobile">
               <div class="thumb">🛍️</div>
               <div class="body">
-                <span class="tag">Web App</span>
-                <h3>Commerce Dashboard</h3>
-                <p>A real-time analytics dashboard for a growing e-commerce brand.</p>
+                <span class="tag">E-commerce · React Native</span>
+                <h3>Mahgoub</h3>
+                <p>
+                  High-performance shopping platform for Egypt's leading ceramic and
+                  bathroom retailer — catalog, checkout, and polished mobile UX.
+                </p>
+                <p class="meta">Selected client project · React Native</p>
               </div>
             </article>
+
             <article class="project reveal" data-category="mobile">
-              <div class="thumb">📱</div>
+              <div class="thumb">🏨</div>
               <div class="body">
-                <span class="tag">Mobile App</span>
-                <h3>FitTrack</h3>
-                <p>A cross-platform fitness tracker with social challenges and insights.</p>
+                <span class="tag">Hospitality · React Native</span>
+                <h3>Stella Di Mare</h3>
+                <p>
+                  Integrated luxury hospitality app for seamless bookings and premium
+                  hotel services.
+                </p>
+                <p class="meta">Selected client project · React Native</p>
               </div>
             </article>
-            <article class="project reveal" data-category="web">
-              <div class="thumb">💬</div>
-              <div class="body">
-                <span class="tag">Web App</span>
-                <h3>DeskFlow</h3>
-                <p>A lightweight helpdesk and ticketing platform for small teams.</p>
-              </div>
-            </article>
+
             <article class="project reveal" data-category="mobile">
-              <div class="thumb">🍽️</div>
+              <div class="thumb">🪑</div>
               <div class="body">
-                <span class="tag">Mobile App</span>
-                <h3>Plately</h3>
-                <p>A recipe and meal-planning app with smart shopping lists.</p>
+                <span class="tag">Marketplace · Flutter</span>
+                <h3>Kemitt</h3>
+                <p>
+                  Full-scale Flutter e-commerce marketplace for home furniture —
+                  product catalog, REST APIs, and payment gateways.
+                </p>
+                <p class="meta">Contributed while at Kemitt · Mobile Applications Developer</p>
               </div>
             </article>
-            <article class="project reveal" data-category="tv">
-              <div class="thumb">🎬</div>
+
+            <article class="project reveal" data-category="mobile">
+              <div class="thumb">📚</div>
               <div class="body">
-                <span class="tag">TV App</span>
-                <h3>StreamHub</h3>
-                <p>A media streaming interface optimized for remote-first navigation.</p>
+                <span class="tag">Education · Flutter</span>
+                <h3>Modarby</h3>
+                <p>
+                  Interactive tutoring features for a leading regional education
+                  platform connecting thousands of students across the Middle East.
+                </p>
+                <p class="meta">Contributed while at Modarby · Mobile Applications Developer</p>
+              </div>
+            </article>
+
+            <article class="project reveal" data-category="studio">
+              <div class="thumb">📺</div>
+              <div class="body">
+                <span class="tag">TV App · Studio</span>
+                <h3>AyahScape</h3>
+                <p>
+                  An immersive Quran experience for smart TVs across multiple
+                  platforms — built and shipped by DelatyLabs.
+                </p>
+                <p class="meta">DelatyLabs studio product</p>
+              </div>
+            </article>
+
+            <article class="project reveal" data-category="studio">
+              <div class="thumb">📖</div>
+              <div class="body">
+                <span class="tag">Education · Android</span>
+                <h3>iTeacher Quran</h3>
+                <p>
+                  Supportive Quran learning app for non-Arabic speakers with reading
+                  and audio-listening features.
+                </p>
+                <p class="meta">Selected project · Java / Android</p>
               </div>
             </article>
           </div>
@@ -120,7 +178,7 @@
             <p class="eyebrow">Your project next?</p>
             <h2>Let's create something worth showing off</h2>
             <p style="max-width: 520px; margin: 0 auto 28px">
-              We'd love to add your product to this list.
+              Enterprise-grade mobile experience, applied to your product.
             </p>
             <a href="contact.html" class="btn btn-primary">Start a project</a>
           </div>
@@ -163,9 +221,8 @@
         <div class="footer-bottom">
           <span>&copy; <span id="year">2026</span> DelatyLabs. All rights reserved.</span>
           <div class="socials">
-            <a href="#" aria-label="GitHub">GH</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="X">X</a>
+            <a href="https://github.com/Abdelaty" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
+            <a href="https://linkedin.com/in/abdelaty" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
           </div>
         </div>
       </div>
