@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/delaty-labs-mark.svg" />
@@ -25,7 +25,7 @@
         <a href="index.html" class="brand">
           <img src="assets/delaty-labs-logo.svg" alt="Delaty Labs" class="brand-lockup" />
         </a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -34,7 +34,7 @@
         </ul>
         <div class="nav-cta">
           <a href="contact.html" class="btn btn-primary">Start a project</a>
-          <button class="nav-toggle" aria-label="Toggle menu">
+          <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
@@ -114,7 +114,7 @@
             <div class="team-card reveal">
               <div class="avatar">+</div>
               <h3>Specialist collaborators</h3>
-              <div class="role">Design · Backend · DevOps</div>
+              <div class="role">Design · Backend · Platform</div>
               <p style="margin-top: 12px; font-size: 0.9rem">
                 We bring in trusted specialists when a project needs deeper design,
                 platform, or infrastructure support.
@@ -171,25 +171,19 @@
               <li><a href="mailto:hello@delatylabs.com">hello@delatylabs.com</a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
-            </ul>
-          </div>
         </div>
         <div class="footer-bottom">
           <span>&copy; <span id="year">2026</span> DelatyLabs. All rights reserved.</span>
           <div class="socials">
-            <a href="#" aria-label="GitHub">GH</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="X">X</a>
+            <a href="https://github.com/DelatyLabs" aria-label="Delaty Labs on GitHub" target="_blank" rel="noopener">GH</a>
+            <a href="https://www.linkedin.com/company/delatylabs/" aria-label="Delaty Labs on LinkedIn" target="_blank" rel="noopener">in</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <script src="js/analytics-config.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

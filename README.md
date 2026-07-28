@@ -77,22 +77,26 @@ In **Porkbun → delatylabs.com → DNS Records**, add:
 DNS changes can take a few minutes to a couple of hours to propagate. HTTPS is
 issued automatically once DNS resolves.
 
-## Push to GitHub
+## GitHub repository
 
 ```bash
-git remote add origin https://github.com/<your-username>/delatylabs-website.git
-git branch -M main
-git push -u origin main
+git remote set-url origin https://github.com/DelatyLabs/delatylabs-website.git
+git push origin main
 ```
 
-## Connecting the contact form
+## Contact form
 
-The contact form is front-end only right now. To receive submissions without a
-backend, point it at a form service such as [Formspree](https://formspree.io) or
-[Netlify Forms](https://docs.netlify.com/forms/setup/):
+The contact form posts to FormSubmit and delivers inquiries to
+`hello@delatylabs.com`. The first test submission sends an activation message to
+that inbox; approve it once to begin receiving form submissions. Spam filtering,
+a honeypot field, reply-to handling, and an automatic acknowledgement are enabled.
 
-```html
-<form class="form" action="https://formspree.io/f/your-id" method="POST">
-```
+## Analytics
 
-Then remove the demo `e.preventDefault()` handler in `js/main.js`.
+The site includes consent-aware Google Analytics 4 tracking for page views,
+traffic sources, geography, project and outbound links, navigation, contact
+links, portfolio filters, and completed contact inquiries.
+
+Create a GA4 property and web data stream for `https://delatylabs.com`, then
+paste the `G-...` Measurement ID into `js/analytics-config.js`. Analytics loads
+only after a visitor allows it in the on-site preference prompt.

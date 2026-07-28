@@ -4,7 +4,23 @@ const navLinks = document.querySelector(".nav-links");
 
 if (navToggle && navLinks) {
   navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("open")) {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.focus();
+    }
   });
 }
 
@@ -38,7 +54,8 @@ if ("IntersectionObserver" in window && revealEls.length) {
 
 // Portfolio filter
 const filters = document.querySelectorAll(".filter");
-const projects = document.querySelectorAll(".project");
+const portfolioGrid = document.querySelector(".filters")?.nextElementSibling;
+const projects = portfolioGrid ? portfolioGrid.querySelectorAll(".project") : [];
 
 filters.forEach((filter) => {
   filter.addEventListener("click", () => {
@@ -52,19 +69,13 @@ filters.forEach((filter) => {
   });
 });
 
-// Contact form (front-end only demo handler)
-const form = document.querySelector(".form");
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const status = form.querySelector(".form-status");
-    const name = form.querySelector("#name")?.value.trim();
-    if (!name) return;
-    if (status) {
-      status.textContent = `Thanks, ${name}! Your message has been received — we'll reply within 1 business day.`;
-    }
-    form.reset();
-  });
+// Show an accurate confirmation after the hosted form service redirects back.
+const form = document.querySelector("#contact-form");
+if (form && new URLSearchParams(window.location.search).get("submitted") === "true") {
+  const status = form.querySelector(".form-status");
+  if (status) {
+    status.textContent = "Thanks — your message was sent successfully.";
+  }
 }
 
 // Footer year

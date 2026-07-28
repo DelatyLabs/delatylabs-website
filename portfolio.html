@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/delaty-labs-mark.svg" />
@@ -25,7 +25,7 @@
         <a href="index.html" class="brand">
           <img src="assets/delaty-labs-logo.svg" alt="Delaty Labs" class="brand-lockup" />
         </a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -34,7 +34,7 @@
         </ul>
         <div class="nav-cta">
           <a href="contact.html" class="btn btn-primary">Start a project</a>
-          <button class="nav-toggle" aria-label="Toggle menu">
+          <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
@@ -60,15 +60,18 @@
       <section style="padding-top: 20px">
         <div class="container">
           <div class="filters">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="enterprise">Enterprise</button>
-            <button class="filter" data-filter="mobile">Consumer apps</button>
-            <button class="filter" data-filter="studio">Studio</button>
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="enterprise">Enterprise</button>
+            <button type="button" class="filter" data-filter="mobile">Consumer apps</button>
           </div>
 
           <div class="portfolio-grid">
             <article class="project reveal" data-category="enterprise">
-              <div class="thumb">🏦</div>
+              <a class="project-media" href="https://apps.apple.com/sa/app/bank-albilad-app/id6502697024" target="_blank" rel="noopener" aria-label="View Bank Albilad App on the App Store">
+                <img class="project-shot" src="assets/projects/bank-albilad-shot.webp" alt="Bank Albilad mobile app interface" loading="lazy" />
+                <img class="project-logo" src="assets/projects/bank-albilad-logo.jpg" alt="Bank Albilad logo" loading="lazy" />
+                <span class="store-label">App Store</span>
+              </a>
               <div class="body">
                 <span class="tag">Fintech · React Native</span>
                 <h3>Bank Albilad Mobile App</h3>
@@ -77,11 +80,16 @@
                   monorepo — CI/CD, modular architecture, and next-gen banking features.
                 </p>
                 <p class="meta">Contributed while at Advansys · Senior Software Developer</p>
+                <a class="project-link" href="https://apps.apple.com/sa/app/bank-albilad-app/id6502697024" target="_blank" rel="noopener">View live app <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
             <article class="project reveal" data-category="enterprise">
-              <div class="thumb">📡</div>
+              <a class="project-media" href="https://apps.apple.com/de/app/meinvodafone/id398195347" target="_blank" rel="noopener" aria-label="View MeinVodafone on the App Store">
+                <img class="project-shot" src="assets/projects/mein-vodafone-shot.jpg" alt="MeinVodafone mobile app interface" loading="lazy" />
+                <img class="project-logo" src="assets/projects/mein-vodafone-logo.jpg" alt="Vodafone logo" loading="lazy" />
+                <span class="store-label">App Store</span>
+              </a>
               <div class="body">
                 <span class="tag">Telecom · 20M+ users</span>
                 <h3>Mein Vodafone</h3>
@@ -90,11 +98,16 @@
                   across the DACH region — performance, clean architecture, and mentoring.
                 </p>
                 <p class="meta">Contributed while at VOIS · Senior Software Developer</p>
+                <a class="project-link" href="https://apps.apple.com/de/app/meinvodafone/id398195347" target="_blank" rel="noopener">View live app <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
             <article class="project reveal" data-category="mobile">
-              <div class="thumb">🛍️</div>
+              <a class="project-media" href="https://apps.apple.com/eg/app/mahgoub-ceramic-and-porcelain/id1516226985" target="_blank" rel="noopener" aria-label="View Mahgoub on the App Store">
+                <img class="project-shot" src="assets/projects/mahgoub-shot.png" alt="Mahgoub shopping app interface" loading="lazy" />
+                <img class="project-logo" src="assets/projects/mahgoub-logo.jpg" alt="Mahgoub logo" loading="lazy" />
+                <span class="store-label">App Store</span>
+              </a>
               <div class="body">
                 <span class="tag">E-commerce · React Native</span>
                 <h3>Mahgoub</h3>
@@ -103,11 +116,16 @@
                   bathroom retailer — catalog, checkout, and polished mobile UX.
                 </p>
                 <p class="meta">Selected client project · React Native</p>
+                <a class="project-link" href="https://apps.apple.com/eg/app/mahgoub-ceramic-and-porcelain/id1516226985" target="_blank" rel="noopener">View live app <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
             <article class="project reveal" data-category="mobile">
-              <div class="thumb">🏨</div>
+              <a class="project-media" href="https://stelladimare.com/hotels/" target="_blank" rel="noopener" aria-label="Visit Stella Di Mare Hotels and Resorts">
+                <img class="project-shot landscape" src="assets/projects/stella-di-mare-shot.jpg" alt="Stella Di Mare resort and pool" loading="lazy" />
+                <img class="project-logo" src="assets/projects/stella-di-mare-logo.png" alt="Stella Di Mare logo" loading="lazy" />
+                <span class="store-label">Official site</span>
+              </a>
               <div class="body">
                 <span class="tag">Hospitality · React Native</span>
                 <h3>Stella Di Mare</h3>
@@ -116,11 +134,16 @@
                   hotel services.
                 </p>
                 <p class="meta">Selected client project · React Native</p>
+                <a class="project-link" href="https://stelladimare.com/hotels/" target="_blank" rel="noopener">Visit official site <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
             <article class="project reveal" data-category="mobile">
-              <div class="thumb">🪑</div>
+              <a class="project-media" href="https://apps.apple.com/us/app/kemitt-home-furniture-more/id1593278016" target="_blank" rel="noopener" aria-label="View Kemitt on the App Store">
+                <img class="project-shot" src="assets/projects/kemitt-shot.png" alt="Kemitt furniture shopping app interface" loading="lazy" />
+                <img class="project-logo" src="assets/projects/kemitt-logo.jpg" alt="Kemitt logo" loading="lazy" />
+                <span class="store-label">App Store</span>
+              </a>
               <div class="body">
                 <span class="tag">Marketplace · Flutter</span>
                 <h3>Kemitt</h3>
@@ -129,11 +152,16 @@
                   product catalog, REST APIs, and payment gateways.
                 </p>
                 <p class="meta">Contributed while at Kemitt · Mobile Applications Developer</p>
+                <a class="project-link" href="https://apps.apple.com/us/app/kemitt-home-furniture-more/id1593278016" target="_blank" rel="noopener">View live app <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
             <article class="project reveal" data-category="mobile">
-              <div class="thumb">📚</div>
+              <a class="project-media" href="https://apps.apple.com/eg/app/modarby-%D9%85%D8%AF%D8%B1%D8%A8%D9%8A/id1556198100" target="_blank" rel="noopener" aria-label="View Modarby on the App Store">
+                <img class="project-shot" src="assets/projects/modarby-shot.webp" alt="Modarby tutoring app interface" loading="lazy" />
+                <img class="project-logo" src="assets/projects/modarby-logo.jpg" alt="Modarby logo" loading="lazy" />
+                <span class="store-label">App Store</span>
+              </a>
               <div class="body">
                 <span class="tag">Education · Flutter</span>
                 <h3>Modarby</h3>
@@ -142,32 +170,82 @@
                   platform connecting thousands of students across the Middle East.
                 </p>
                 <p class="meta">Contributed while at Modarby · Mobile Applications Developer</p>
+                <a class="project-link" href="https://apps.apple.com/eg/app/modarby-%D9%85%D8%AF%D8%B1%D8%A8%D9%8A/id1556198100" target="_blank" rel="noopener">View live app <span aria-hidden="true">↗</span></a>
               </div>
             </article>
 
-            <article class="project reveal" data-category="studio">
-              <div class="thumb">📺</div>
+            <article class="project reveal" data-category="mobile">
+              <a class="project-media" href="https://apps.apple.com/us/app/iteacher-quran/id1425945930" target="_blank" rel="noopener" aria-label="View iTeacher Quran on the App Store">
+                <img class="project-shot" src="assets/projects/iteacher-quran-shot.jpg" alt="iTeacher Quran app interface" loading="lazy" />
+                <img class="project-logo" src="assets/projects/iteacher-quran-logo.jpg" alt="iTeacher Quran logo" loading="lazy" />
+                <span class="store-label">App Store</span>
+              </a>
               <div class="body">
-                <span class="tag">TV App · Studio</span>
-                <h3>AyahScape</h3>
-                <p>
-                  An immersive Quran experience for smart TVs across multiple
-                  platforms — built and shipped by DelatyLabs.
-                </p>
-                <p class="meta">DelatyLabs studio product</p>
-              </div>
-            </article>
-
-            <article class="project reveal" data-category="studio">
-              <div class="thumb">📖</div>
-              <div class="body">
-                <span class="tag">Education · Android</span>
+                <span class="tag">Education · Android &amp; iOS</span>
                 <h3>iTeacher Quran</h3>
                 <p>
-                  Supportive Quran learning app for non-Arabic speakers with reading
-                  and audio-listening features.
+                  Supportive Quran memorization for non-Arabic speakers with guided
+                  repetition, reading, translation, and audio listening.
                 </p>
-                <p class="meta">Selected project · Java / Android</p>
+                <p class="meta">Selected project · Mobile</p>
+                <a class="project-link" href="https://apps.apple.com/us/app/iteacher-quran/id1425945930" target="_blank" rel="noopener">View live app <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="future-work" id="future-work">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Future work</p>
+            <h2>Products we're shaping next</h2>
+            <p>Early-stage Delaty Labs products currently in design and development.</p>
+          </div>
+          <div class="portfolio-grid future-grid">
+            <article class="project future-project reveal" data-category="future">
+              <a class="project-media future-media" href="https://github.com/DelatyLabs" target="_blank" rel="noopener" aria-label="Visit Delaty Labs on GitHub for ONS updates">
+                <img class="future-logo" src="assets/projects/ons-logo.png" alt="ONS logo" loading="lazy" />
+                <span class="status-label">In development</span>
+              </a>
+              <div class="body">
+                <span class="tag">Couples wellness · React Native</span>
+                <h3>ONS</h3>
+                <p>
+                  An Arabic-first wellness app for married couples, with shared
+                  check-ins, games, journaling, and guided support.
+                </p>
+                <p class="meta">Delaty Labs product · Private preview</p>
+                <a class="project-link" href="https://github.com/DelatyLabs" target="_blank" rel="noopener">Follow the studio <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project future-project reveal" data-category="future">
+              <a class="project-media future-media ayahscape-media" href="https://github.com/DelatyLabs" target="_blank" rel="noopener" aria-label="Visit Delaty Labs on GitHub for AyahScape updates">
+                <img class="project-shot landscape" src="assets/projects/ayahscape-shot.png" alt="AyahScape TV app artwork" loading="lazy" />
+                <img class="project-logo" src="assets/projects/ayahscape-logo.png" alt="AyahScape logo" loading="lazy" />
+                <span class="status-label">In development</span>
+              </a>
+              <div class="body">
+                <span class="tag">Quran · Smart TV</span>
+                <h3>AyahScape</h3>
+                <p>An immersive, calm Quran experience designed for Android TV, Samsung, LG, and Roku.</p>
+                <p class="meta">Delaty Labs product · Multi-platform TV</p>
+                <a class="project-link" href="https://github.com/DelatyLabs" target="_blank" rel="noopener">Follow the studio <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+
+            <article class="project future-project reveal" data-category="future">
+              <a class="project-media future-media fresh-media" href="https://fresh-snap-app.web.app/" target="_blank" rel="noopener" aria-label="Open the Fresh Snap preview website">
+                <img class="future-logo" src="assets/projects/fresh-snap-logo.png" alt="Fresh Snap logo" loading="lazy" />
+                <span class="status-label">In development</span>
+              </a>
+              <div class="body">
+                <span class="tag">Food tech · Flutter</span>
+                <h3>Fresh Snap</h3>
+                <p>Visual food-appearance assessment that offers practical decision support while avoiding unsafe guarantees.</p>
+                <p class="meta">Delaty Labs product · Mobile &amp; web</p>
+                <a class="project-link" href="https://fresh-snap-app.web.app/" target="_blank" rel="noopener">View product preview <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>
@@ -212,24 +290,19 @@
               <li><a href="mailto:hello@delatylabs.com">hello@delatylabs.com</a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
-            </ul>
-          </div>
         </div>
         <div class="footer-bottom">
           <span>&copy; <span id="year">2026</span> DelatyLabs. All rights reserved.</span>
           <div class="socials">
-            <a href="https://github.com/DelatyLabs" aria-label="GitHub" target="_blank" rel="noopener">GH</a>
-            <a href="https://linkedin.com/in/abdelaty" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+            <a href="https://github.com/DelatyLabs" aria-label="Delaty Labs on GitHub" target="_blank" rel="noopener">GH</a>
+            <a href="https://www.linkedin.com/company/delatylabs/" aria-label="Delaty Labs on LinkedIn" target="_blank" rel="noopener">in</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <script src="js/analytics-config.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

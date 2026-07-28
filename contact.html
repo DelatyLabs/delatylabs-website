@@ -6,12 +6,12 @@
     <title>Contact — DelatyLabs</title>
     <meta
       name="description"
-      content="Get in touch with DelatyLabs. Tell us about your project and we'll reply within one business day."
+      content="Get in touch with DelatyLabs and tell us about the product you want to build."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="assets/delaty-labs-mark.svg" />
@@ -25,7 +25,7 @@
         <a href="index.html" class="brand">
           <img src="assets/delaty-labs-logo.svg" alt="Delaty Labs" class="brand-lockup" />
         </a>
-        <ul class="nav-links">
+        <ul class="nav-links" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
@@ -34,7 +34,7 @@
         </ul>
         <div class="nav-cta">
           <a href="contact.html" class="btn btn-primary">Start a project</a>
-          <button class="nav-toggle" aria-label="Toggle menu">
+          <button type="button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-navigation">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="3" y1="6" x2="21" y2="6" />
               <line x1="3" y1="12" x2="21" y2="12" />
@@ -50,7 +50,7 @@
         <div class="container">
           <p class="eyebrow">Contact</p>
           <h1>Let's talk about your project.</h1>
-          <p>Fill out the form and we'll get back to you within one business day.</p>
+          <p>Share what you're building, where you are today, and what a successful launch looks like.</p>
         </div>
       </section>
 
@@ -69,7 +69,7 @@
                 <div class="icon">☎</div>
                 <div>
                   <h3>Phone</h3>
-                  <p>+1 (555) 010-2030</p>
+                  <a href="tel:+201006958811">+20&nbsp;100&nbsp;695&nbsp;8811</a>
                 </div>
               </div>
               <div class="info-item">
@@ -88,14 +88,31 @@
               </div>
             </div>
 
-            <form class="form reveal" novalidate>
+            <form
+              class="form reveal"
+              id="contact-form"
+              action="https://formsubmit.co/hello@delatylabs.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New Delaty Labs project inquiry" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://delatylabs.com/contact.html?submitted=true#contact-form" />
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thanks for contacting Delaty Labs. We received your project inquiry and will review it shortly."
+              />
+              <div class="honey-field" aria-hidden="true">
+                <label for="company-website">Company website</label>
+                <input type="text" id="company-website" name="_honey" tabindex="-1" autocomplete="off" />
+              </div>
               <div class="field">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Your name" required />
               </div>
               <div class="field">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+                <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" required />
               </div>
               <div class="field">
                 <label for="subject">Subject</label>
@@ -107,7 +124,7 @@
               </div>
               <button type="submit" class="btn btn-primary">Send message</button>
               <p class="form-note">
-                This demo form doesn't send email yet — see the README for how to connect it.
+                Protected by spam filtering. Your details are used only to reply to this inquiry.
               </p>
               <p class="form-status" role="status"></p>
             </form>
@@ -140,25 +157,19 @@
               <li><a href="mailto:hello@delatylabs.com">hello@delatylabs.com</a></li>
             </ul>
           </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
-            </ul>
-          </div>
         </div>
         <div class="footer-bottom">
           <span>&copy; <span id="year">2026</span> DelatyLabs. All rights reserved.</span>
           <div class="socials">
-            <a href="#" aria-label="GitHub">GH</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="X">X</a>
+            <a href="https://github.com/DelatyLabs" aria-label="Delaty Labs on GitHub" target="_blank" rel="noopener">GH</a>
+            <a href="https://www.linkedin.com/company/delatylabs/" aria-label="Delaty Labs on LinkedIn" target="_blank" rel="noopener">in</a>
           </div>
         </div>
       </div>
     </footer>
 
+    <script src="js/analytics-config.js"></script>
+    <script src="js/analytics.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
