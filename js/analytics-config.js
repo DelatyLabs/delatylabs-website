@@ -1,4 +1,4 @@
-// Paste the GA4 web stream Measurement ID here after creating the property.
+// Delaty Labs Google Analytics 4 web stream.
 window.DELATY_ANALYTICS = {
-  measurementId: "",
+  measurementId: "G-7W5KDEYWN9",
 };
