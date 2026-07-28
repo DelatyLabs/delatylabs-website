@@ -141,21 +141,15 @@ p {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
+  min-width: 0;
 }
 
-.brand .logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-weight: 800;
+.brand-lockup {
+  display: block;
+  width: 184px;
+  height: 44px;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .nav-links {

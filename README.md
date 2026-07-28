@@ -27,7 +27,7 @@ delatylabs-website/
 │   └── styles.css
 ├── js/
 │   └── main.js
-├── assets/          # images, favicon, etc.
+├── assets/          # Delaty Labs logo, favicon, touch icon, and images
 ├── CNAME            # custom domain for GitHub Pages
 └── README.md
 ```
