@@ -449,6 +449,14 @@ p {
   color: var(--text-muted);
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -459,6 +467,11 @@ p {
   color: var(--text);
   font-size: 0.86rem;
   font-weight: 600;
+}
+
+.project-links .project-link {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .project-link:hover {
